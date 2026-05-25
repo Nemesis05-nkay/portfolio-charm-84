@@ -9,6 +9,7 @@ import workGraySpace from "@/assets/work-grayspace.jpg";
 import workNdgLogo from "@/assets/work-ndg-logo.jpg";
 import workBennellys from "@/assets/work-bennellys.jpg";
 import workOlani from "@/assets/work-olani.jpg";
+import kamalAvatar from "@/assets/kamal-avatar.png";
 import { Mail, Phone, Github, MapPin, ArrowUpRight, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -104,8 +105,8 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center gap-2 font-semibold tracking-tight">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-[image:var(--gradient-text)] text-primary-foreground">
-              K
+            <span className="grid h-8 w-8 place-items-center overflow-hidden rounded-lg bg-[image:var(--gradient-text)] text-primary-foreground ring-1 ring-border/60">
+              <img src={kamalAvatar} alt="KamalNK" className="h-full w-full object-cover" />
             </span>
             <span>KamalNK</span>
           </a>
