@@ -1,14 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
 import flyerServices from "@/assets/flyer-services.jpg";
 import workFirstLove from "@/assets/work-firstlove.jpg";
 import workKezia from "@/assets/work-kezia.jpg";
 import workDarkoa from "@/assets/work-darkoa.jpg";
 import workKbIntro from "@/assets/work-kbintro.jpg";
-import workGraySpace from "@/assets/work-grayspace.jpg";
-import workNdgLogo from "@/assets/work-ndg-logo.jpg";
-import workBennellys from "@/assets/work-bennellys.jpg";
-import workOlani from "@/assets/work-olani.jpg";
 import kamalAvatar from "@/assets/kamal-avatar.png";
 import { Mail, Phone, Github, MapPin, ArrowUpRight, Sparkles } from "lucide-react";
 
@@ -18,43 +13,25 @@ export const Route = createFileRoute("/")({
 
 const works = [
   {
-    src: workGraySpace,
-    images: [workGraySpace, workBennellys, workKbIntro, workFirstLove],
-    title: "The Gray Space",
-    category: "Brand Campaign",
-    description: "Bold portrait poster and social identity for The Gray Space.",
-  },
-  {
-    src: workNdgLogo,
-    images: [workNdgLogo, workOlani, workDarkoa, workKezia],
-    title: "NDG — Adinkra Mark",
-    category: "Logo Design",
-    description: "Minimal diamond-grid logo inspired by Adinkra symbolism.",
-  },
-  {
     src: workFirstLove,
-    images: [workFirstLove, workBennellys],
     title: "First Love Church",
     category: "Social Media Design",
     description: "Member proud-of campaign graphic for First Love Church.",
   },
   {
     src: workKezia,
-    images: [workKezia, workOlani],
     title: "Kezia's Love Bites",
     category: "Flyer · Menu Design",
     description: "Valentine's Day packages flyer with vibrant food styling.",
   },
   {
     src: workDarkoa,
-    images: [workDarkoa],
     title: "Gallery Lash Artistry",
     category: "Promo Flyer",
     description: "Valentine's Day special promo pricing flyer.",
   },
   {
     src: workKbIntro,
-    images: [workKbIntro],
     title: "Nana Kwame Brew — KB",
     category: "Personal Branding",
     description: "Editorial intro slide for a student leader's brand.",
@@ -73,30 +50,6 @@ const services = [
   "Menu Design",
   "UI / UX Design",
 ];
-
-function WorkImage({ images, alt }: { images: string[]; alt: string }) {
-  const [i, setI] = useState(0);
-  useEffect(() => {
-    if (images.length < 2) return;
-    const id = setInterval(() => setI((p) => (p + 1) % images.length), 5000);
-    return () => clearInterval(id);
-  }, [images.length]);
-  return (
-    <div className="relative h-full w-full">
-      {images.map((src, idx) => (
-        <img
-          key={src}
-          src={src}
-          alt={alt}
-          loading="lazy"
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
-            idx === i ? "opacity-100" : "opacity-0"
-          } group-hover:scale-105`}
-        />
-      ))}
-    </div>
-  );
-}
 
 function Index() {
   return (
@@ -224,7 +177,12 @@ function Index() {
                 className="group overflow-hidden rounded-3xl border border-border/60 bg-card transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-glow)]"
               >
                 <div className="aspect-[4/5] overflow-hidden">
-                  <WorkImage images={w.images} alt={w.title} />
+                  <img
+                    src={w.src}
+                    alt={w.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
                 </div>
                 <div className="flex items-start justify-between gap-4 p-6">
                   <div>
