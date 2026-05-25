@@ -5,7 +5,7 @@ import workKezia from "@/assets/work-kezia.jpg";
 import workDarkoa from "@/assets/work-darkoa.jpg";
 import workKbIntro from "@/assets/work-kbintro.jpg";
 import kamalAvatar from "@/assets/kamal-avatar.png";
-import { Mail, Phone, Github, MapPin, ArrowUpRight, Sparkles } from "lucide-react";
+import { Mail, Phone, Github, MapPin, ArrowUpRight, Sparkles, FileText } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -237,6 +237,18 @@ function Index() {
                   {t}
                 </span>
               ))}
+            </div>
+            <div className="pt-4">
+              <a
+                href="/kamalnk-cv.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-background px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-[var(--shadow-glow)]"
+              >
+                <FileText className="h-4 w-4 text-primary" />
+                View my CV
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
