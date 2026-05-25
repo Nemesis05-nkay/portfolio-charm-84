@@ -75,11 +75,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "KamalNK — Graphic Designer, UI/UX & Software Engineer" },
       { name: "description", content: "Portfolio of KamalNK — graphic design, UI/UX and software engineering work from Accra, Ghana." },
       { name: "author", content: "KamalNK" },
-      { property: "og:title", content: "KamalNK — Graphic Designer & Developer" },
-      { property: "og:description", content: "Selected graphic design work, flyers, branding and digital projects by KamalNK." },
+      { property: "og:title", content: "KamalNK — Graphic Designer, UI/UX & Software Engineer" },
+      { property: "og:description", content: "Portfolio of KamalNK — graphic design, UI/UX and software engineering work from Accra, Ghana." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "KamalNK — Graphic Designer, UI/UX & Software Engineer" },
+      { name: "twitter:description", content: "Portfolio of KamalNK — graphic design, UI/UX and software engineering work from Accra, Ghana." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/tBRmSE2xWpQLxOZZx0LOQHItIA42/social-images/social-1779730795914-photo_2025-10-27_00-53-13.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/tBRmSE2xWpQLxOZZx0LOQHItIA42/social-images/social-1779730795914-photo_2025-10-27_00-53-13.webp" },
     ],
     links: [
       {
