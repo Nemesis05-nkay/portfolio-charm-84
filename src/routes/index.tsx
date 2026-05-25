@@ -241,8 +241,18 @@ function Index() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="border-t border-border/40 bg-card/30 py-24">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
+      <section id="about" className="relative overflow-hidden border-t border-border/40 bg-card/30 py-24">
+        <img
+          src={kamalAvatar}
+          alt=""
+          aria-hidden
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10 mix-blend-luminosity"
+        />
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{ background: "linear-gradient(180deg, var(--background) 0%, transparent 30%, transparent 70%, var(--background) 100%)" }}
+        />
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
           <div>
             <p className="text-sm uppercase tracking-widest text-primary">About</p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight md:text-5xl">
