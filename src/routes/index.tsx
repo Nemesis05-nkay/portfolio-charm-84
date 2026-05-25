@@ -7,6 +7,8 @@ import workDarkoa from "@/assets/work-darkoa.jpg";
 import workKbIntro from "@/assets/work-kbintro.jpg";
 import workGraySpace from "@/assets/work-grayspace.jpg";
 import workNdgLogo from "@/assets/work-ndg-logo.jpg";
+import workBennellys from "@/assets/work-bennellys.jpg";
+import workOlani from "@/assets/work-olani.jpg";
 import { Mail, Phone, Github, MapPin, ArrowUpRight, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -16,28 +18,28 @@ export const Route = createFileRoute("/")({
 const works = [
   {
     src: workGraySpace,
-    images: [workGraySpace, workKbIntro, workFirstLove],
+    images: [workGraySpace, workBennellys, workKbIntro, workFirstLove],
     title: "The Gray Space",
     category: "Brand Campaign",
     description: "Bold portrait poster and social identity for The Gray Space.",
   },
   {
     src: workNdgLogo,
-    images: [workNdgLogo, workDarkoa, workKezia],
+    images: [workNdgLogo, workOlani, workDarkoa, workKezia],
     title: "NDG — Adinkra Mark",
     category: "Logo Design",
     description: "Minimal diamond-grid logo inspired by Adinkra symbolism.",
   },
   {
     src: workFirstLove,
-    images: [workFirstLove],
+    images: [workFirstLove, workBennellys],
     title: "First Love Church",
     category: "Social Media Design",
     description: "Member proud-of campaign graphic for First Love Church.",
   },
   {
     src: workKezia,
-    images: [workKezia],
+    images: [workKezia, workOlani],
     title: "Kezia's Love Bites",
     category: "Flyer · Menu Design",
     description: "Valentine's Day packages flyer with vibrant food styling.",
@@ -75,7 +77,7 @@ function WorkImage({ images, alt }: { images: string[]; alt: string }) {
   const [i, setI] = useState(0);
   useEffect(() => {
     if (images.length < 2) return;
-    const id = setInterval(() => setI((p) => (p + 1) % images.length), 3000);
+    const id = setInterval(() => setI((p) => (p + 1) % images.length), 5000);
     return () => clearInterval(id);
   }, [images.length]);
   return (
